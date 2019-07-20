@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		A300663422E295BB0002DDB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A300663322E295BB0002DDB0 /* AppDelegate.swift */; };
-		A300663622E295BB0002DDB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A300663522E295BB0002DDB0 /* ViewController.swift */; };
+		A300663622E295BB0002DDB0 /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A300663522E295BB0002DDB0 /* mainVC.swift */; };
 		A300663922E295BB0002DDB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A300663722E295BB0002DDB0 /* Main.storyboard */; };
 		A300663B22E295BD0002DDB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A300663A22E295BD0002DDB0 /* Assets.xcassets */; };
 		A300663E22E295BD0002DDB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A300663C22E295BD0002DDB0 /* LaunchScreen.storyboard */; };
+		A300664A22E298A70002DDB0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A300664922E298A70002DDB0 /* Category.swift */; };
+		A300664F22E299400002DDB0 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A300664E22E299400002DDB0 /* DataService.swift */; };
+		A300665122E29B930002DDB0 /* categoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A300665022E29B930002DDB0 /* categoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A300663022E295BB0002DDB0 /* accelerometer-photos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "accelerometer-photos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A300663322E295BB0002DDB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A300663522E295BB0002DDB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A300663522E295BB0002DDB0 /* mainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainVC.swift; sourceTree = "<group>"; };
 		A300663822E295BB0002DDB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A300663A22E295BD0002DDB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A300663D22E295BD0002DDB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A300663F22E295BD0002DDB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A300664922E298A70002DDB0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A300664E22E299400002DDB0 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		A300665022E29B930002DDB0 /* categoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = categoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		A300663222E295BB0002DDB0 /* accelerometer-photos */ = {
 			isa = PBXGroup;
 			children = (
+				A300664B22E299110002DDB0 /* DataService */,
+				A300664822E298480002DDB0 /* Controller */,
+				A300664722E298410002DDB0 /* Model */,
+				A300664522E2982B0002DDB0 /* View */,
 				A300663322E295BB0002DDB0 /* AppDelegate.swift */,
-				A300663522E295BB0002DDB0 /* ViewController.swift */,
 				A300663722E295BB0002DDB0 /* Main.storyboard */,
 				A300663A22E295BD0002DDB0 /* Assets.xcassets */,
 				A300663C22E295BD0002DDB0 /* LaunchScreen.storyboard */,
 				A300663F22E295BD0002DDB0 /* Info.plist */,
 			);
 			path = "accelerometer-photos";
+			sourceTree = "<group>";
+		};
+		A300664522E2982B0002DDB0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A300665022E29B930002DDB0 /* categoryCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A300664722E298410002DDB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A300664922E298A70002DDB0 /* Category.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A300664822E298480002DDB0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A300663522E295BB0002DDB0 /* mainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A300664B22E299110002DDB0 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				A300664E22E299400002DDB0 /* DataService.swift */,
+			);
+			path = DataService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A300663622E295BB0002DDB0 /* ViewController.swift in Sources */,
+				A300663622E295BB0002DDB0 /* mainVC.swift in Sources */,
 				A300663422E295BB0002DDB0 /* AppDelegate.swift in Sources */,
+				A300664A22E298A70002DDB0 /* Category.swift in Sources */,
+				A300664F22E299400002DDB0 /* DataService.swift in Sources */,
+				A300665122E29B930002DDB0 /* categoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
